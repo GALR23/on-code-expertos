@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>On-code : Desarrolla en linea</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Custom Theme files -->
+<link rel="shorcut icon" href="img/iconologo.png">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
+<link href="css/font-awesome.css" rel="stylesheet">   <!-- font-awesome icons --> 
+<link rel="stylesheet" href="css/jquery.gallery.css">
+<script src="js/jquery-2.2.3.min.js"></script> 
+<link href="//fonts.googleapis.com/css?family=Cormorant+Upright:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+</head>
+<body> 
+	<!-- banner -->
+	<div class="w3ls-banner">
+		<div class="w3lsbanner-info">
+			<div class="header">
+				<div class="container">
+					<div class="header-left">
+						<div class="w3layouts-logo">
+							
+							<img src="img/logo2.png" alt="logo">
+						</div>
+					</div>
+					<div class="header-right">
+						<div class="agileinfo-social-grids">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!--BOTON DESPLEGABLE-->
+			<div class="header-bottom">
+				<div class="container">
+					<div class="top-nav">
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a class="active list-border" href="index.html">Home</a></li>
+									<li><a href="#about" class="scroll">Descubre</a></li> 
+									<!--<li><a href="#services" class="scroll">Services</a></li> -->
+									<!--<li><a href="#gallery" class="scroll">Gallery</a></li> -->
+									<li><a href="#team" class="scroll">Precios</a></li>
+									<li><a href="registro.html">Registro</a></li>
+									<li><a href="login.html">Ingresar</a></li>
+									<!--<li><a href="#news" class="scroll">News</a></li>-->
+									<!--<li><a class="list-border1 scroll" href="#contact">Contact</a></li>-->
+								</ul>	
+								<div class="clearfix"> </div>
+							</div>	
+						</nav>		
+					</div>
+				</div>
+			</div>
+			<div class="w3layouts-banner-info">
+				<div class="container">
+					<div class="w3layouts-banner-slider">
+						<div class="w3layouts-banner-top-slider">
+							<div class="slider">
+								<div class="callbacks_container">
+									<ul class="rslides callbacks callbacks1" id="slider4">
+										<li>
+											<div class="w3ls-text" style="padding-left: 100px; margin-left: 80px;">
+												<div class="w3ls-text-info">
+													<h2 style="width: 760px;">
+														El desarrollo colaborativo
+														nunca fue más fácil. 
+													</h2>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="w3ls-text" style="margin-left: 100px;" >
+												<div class="w3ls-text-info">
+													<h2 style="width: 844px;">
+														Accede a tus proyectos
+														cuando quieras,donde quieras.
+
+													</h2>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="clearfix"> </div>
+								<script src="js/responsiveslides.min.js"></script>
+								<script>
+									// You can also use "$(window).load(function() {"
+									$(function () {
+									  // Slideshow 4
+									  $("#slider4").responsiveSlides({
+										auto: true,
+										pager:true,
+										nav:true,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+										  $('.news').append("<li>before event fired.</li>");
+										},
+										after: function () {
+										  $('.news').append("<li>after event fired.</li>");
+										}
+									  });
+								
+									});
+								 </script>
+								<!--banner Slider starts Here-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- about -->
+	<div id="about" class="about">
+		<div class="container">
+			<div class="agileits-title">
+				<h3>On-code: Desarrolla en línea</h3>
+				<p>Ahora trabajar en tus proyectos es más fácil.</p>
+			</div>
+			<div class="w3l-about-grids">
+				<div class="col-md-6 w3ls-about-right">
+					<img src="img/lenguajes1.jpg" width="84%"  alt=""> 
+				</div>
+				<div class="col-md-6 w3ls-about-left">
+					<div class="agileits-icon-grid">
+						<div class="icon-left hvr-radial-out">
+							<i class="fa fa-folder" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Todos tus proyectos en un solo lugar</h5>
+							<p>Accede a ellos en el momento que desees.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="agileits-icon-grid">
+						<div class="icon-left hvr-radial-out">
+							<i class="fa fa-users" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Colaboración en linea con tu equipo de trabajo</h5>
+							<p>Desarrolla junto a tus compañeros simultáneamente en un solo archivo.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="agileits-icon-grid">
+						<div class="icon-left hvr-radial-out">
+							<i class="fa fa-comments" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Chatea con tus colaboradores</h5>
+							<p>Comunicate con tu equipo cuando quieras tener una opinión.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div> 
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- team -->
+	<div id="team" class="jarallax team">
+		<div class="team-dot">
+			<div class="container"> 
+				<div class="agileits-title w3title1">
+					<h3>Precios</h3>
+					<p>Adquiere más espacio con nuestros planes </p>
+				</div>
+				<div class="agileits-team-grids">
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info" >
+							<img src="img/S M.png" alt="">
+							<div class="team-caption"> 
+								<h4>Plan SM</h4>
+								<p>100MB de almacenamiento gratis</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="img/md.png" alt="">
+							<div class="team-caption"> 
+								<h4>Plan MD</h4>
+								<p>200MB de almacenamiento por $10</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="img/lg.png" alt="">
+							<div class="team-caption"> 
+								<h4>Plan LG</h4>
+								<p>300MB de almacenamiento por $20</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 agileits-team-grid">
+						<div class="team-info">
+							<img src="img/xl.png" alt="">
+							<div class="team-caption"> 
+								<h4>Plan XL</h4>
+								<p>400MB de almacenamiento por $30</p>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //team -->
+	
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+					<h4 class="modal-title">Exploit creative agency</h4>
+				</div> 
+				<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="images/1.jpg" alt="" />
+						<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper.  Cras tempor massa luctus, varius lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- gallery -->
+	<div id="gallery" class="gallery">
+		<div class="container"> 
+			<div class="agileits-title">
+				<h3>Únete</h3>
+				<p>Comienza a desarrollar en línea.</p> 
+			</div>
+		</div> 
+		<div class="w3_agile_gallery_grids">
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid"> 
+				<div class="w3_agileits_gallery_grid">
+					<a href="images/g1.jpg" >
+						<div class="view effect">
+							<img src="images/g1.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>On-code</h4>
+							</div>
+						</div> 
+					</a>
+				</div>
+			</div> 
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid">
+				<div class="w3_agileits_gallery_grid">
+					<a href="images/g2.jpg" >
+						<div class="view effect">
+							<img src="images/g2.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>On-code</h4>
+							</div>
+						</div> 
+					</a>
+				</div> 
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid">
+				<div class="w3_agileits_gallery_grid">
+					<a href="images/g3.jpg" >
+						<div class="view effect">
+							<img src="images/g3.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>On-code</h4>
+							</div>
+						</div> 
+					</a>
+				</div> 
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid"> 
+				<div class="w3_agileits_gallery_grid">
+					<a href="images/g4.jpg" >
+						<div class="view effect">
+							<img src="images/g4.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>On-code</h4>
+							</div>
+						</div> 
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid"> 
+				<div class="w3_agileits_gallery_grid">
+					<a href="images/g5.jpg" >
+						<div class="view effect">
+							<img src="images/g5.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>On-code</h4>
+							</div>
+						</div> 
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 agile_gallery_grid"> 
+				<div class="w3_agileits_gallery_grid">
+					<a href="images/g6.jpg" >
+						<div class="view effect">
+							<img src="images/g6.jpg" alt=" " class="img-responsive" />
+							<div class="mask"></div>
+							<div class="content">
+								<h4>On-code</h4>
+							</div>
+						</div> 
+					</a>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<script type="text/javascript"  src="js/jquery.gallery.js" ></script>
+		<script>
+			$(function() {
+				$('.w3_agile_gallery_grids').createSimpleImgGallery();
+			});
+		</script>
+	</div>
+	
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-4 agileinfo_footer_grid">
+				<h3>¡Únete ya!</h3>
+				<p>Desarrollar en línea nunca fue más fácil. Forma parte de la comunidad de On-code y obten todos
+					los beneficios que este te ofrece. </p> <br>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid">
+				<img src="img/logo2.png" alt="logo" style="margin-left: 0px; margin-top: 29px; width: 300px;">
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid">
+				<h3>Social Media</h3> 
+				<div class="agileinfo-social-grids footer-w3icons">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i>-  Facebook</a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i>- Twitter</a></li>
+						<li><a href="#"><i class="fa fa-rss"></i> - RSS</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copy-right -->
+	<div class="w3agile_copy_right">
+		<div class="container">
+			 <p>© 2018 On-code. Todos los derechos reservados</p>
+		</div>
+	</div>
+
+		
+	<!-- //copy-right --> 
+	<!-- jarallax --> 
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<script src="js/SmoothScroll.min.js"></script> 
+	<script src="js/jarallax.js"></script> 
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>  
+	<!-- //jarallax -->  
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!-- //end-smooth-scrolling -->	
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

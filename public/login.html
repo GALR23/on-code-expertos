@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicia Sesión</title>
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/registrologin.css" />
+    <link rel="shorcut icon" href="img/iconologo.png">
+
+    <style>
+        #boton-login{
+    margin: 20px auto;
+    padding: 9px 60px;
+    border-radius: 25px;
+    font-size: 18px;
+    border: none;
+    background-color: #0b4ba7d1;
+    color: #fff;
+    text-transform: uppercase;
+    outline: 0;
+    border: 1px solid #4f5d61;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body id="login">
+        <div class="agile-login">
+                <!-- <h1>On-code : Desarrolla en línea</h1> -->
+                <div class="wrapper">
+                    <img src="img/logo2.png" width="150px">
+                    <h2>Inicia Sesión</h2>
+                    <div class="w3ls-form">
+                        <form action="/" method="post">
+                            <label>Usuario</label>
+                            <input id="correo-login" type="text" name="name" placeholder="Correo" required/>
+                            <label>Contraseña</label>
+                            <input id="contrasena-login" type="text" name="password" placeholder="Contraseña" required />
+                            <button id="boton-login" type="button" class="btn btn-primary">Log In</button>
+                            <a href="registro.html" class="pass">¿Eres nuevo? Registrate</a>
+                        </form>
+                    </div>
+                    
+                    <div class="agile-icons">
+                        <a href="#"><span class="fa fa-twitter"></span></a>
+                        <a href="#"><span class="fa fa-facebook"></span></a>
+                        <a href="#"><span class="fa fa-pinterest-p"></span></a>
+                    </div>
+                </div>
+                <br>
+         </div>
+         <script src="js/jquery.min.js"></script>          
+         <script src="controladores/controlador-login.js"></script>
+</body>
+</html> 

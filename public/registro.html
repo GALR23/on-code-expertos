@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/registrologin.css" />
+    <link rel="shorcut icon" href="img/iconologo.png">
+
+    <style>
+        #registrar{
+    margin: 20px auto;
+    padding: 9px 60px;
+    border-radius: 25px;
+    font-size: 18px;
+    border: none;
+    background-color: #0b4ba7d1;
+    color: #fff;
+    text-transform: uppercase;
+    outline: 0;
+    border: 1px solid #4f5d61;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body id="registro">
+        <div class="agile-login">
+                <!-- <h1>On-code : Desarrolla en línea</h1> -->
+                <div class="wrapper-login">
+                    <img src="img/logo2.png" width="150px">
+                    <h2>Registrate</h2>
+                    <div class="w3ls-form">
+                        <form action="/" method="post">
+                            <label>Nombre</label>
+                            <input id="nombre" type="text" name="name" placeholder="Tu nombre" required/>
+                            <label>Apellido</label>
+                            <input id="apellido" type="text" name="name" placeholder="Tu apellido" required/>
+                            <label>Correo electónico</label>
+                            <input id="correo" type="text" name="name" placeholder="Correo electrónico" required/>
+                            <label>Nombre de usuario</label>
+                            <input id="username" type="text" name="name" placeholder="Username" required/>
+                            <label>Contraseña</label>
+                            <input id="contrasena" type="password" name="password" placeholder="Password" required />
+                            <button id="registrar" type="button" class="btn btn-primary">Registrarse</button>
+                            <a href="login.html" class="pass" style="margin-right: 47px!important;">¿Tienes cuenta? Inicia Sesión</a>
+                            
+                        </form>
+                    </div>
+                    
+                </div>
+                <br>
+         </div>
+
+<!-- Modal -->
+<div class="modal fade" id="campos-vacios" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">¡Cuidado!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Tienes que llenar todos los campos antes de continuar
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <!--button type="button" class="btn btn-primary">Save changes</button-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="cuenta-existente" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">¡Error!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Ya hay una cuenta con ese correo.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <!--button type="button" class="btn btn-primary">Save changes</button-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="registro-exitoso" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">¡Exito!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Usuario registrado con exito, ¡bienvenido a On-code!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <!--button type="button" class="btn btn-primary">Save changes</button-->
+        </div>
+      </div>
+    </div>
+  </div>
+ <script src="js/jquery.min.js"></script>          
+ <script src="controladores/controlador-registro.js"></script>
+</body>
+</html> 

@@ -1,0 +1,142 @@
+/*----ARREGLOS GENERALES----*/
+html{
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: verdana, geneva, serif;
+}
+/*------------------LANDING PAGE-------------- */
+/*-----BANNER*------*/
+#banner{
+	background: url(../img/fondo2.png) no-repeat center bottom;
+	width:100%x;
+	height: 850px;
+	-webkit-background-size:cover;
+	-moz-background-size:cover; 
+	background-size: cover;
+	position: relative; 
+}
+
+
+/*------BARRA DE NAVEGACION Y LOGO-----*/
+header{
+	padding: 1em 0 ;
+	/*background-color: #1F2A3D;*/
+	/*background-color: rgba(31,42,64,0.85);*/
+	/*background-color: #0b2965; */
+	background-color: none;
+}
+
+nav{
+	/*width: 1200px; */
+	margin: auto;
+	position: relative;
+}
+
+nav ul{
+	margin-top: 15px;
+	list-style: none;
+	float: right;
+}
+
+ header nav ul li a {
+ 	display: inline-block;
+	width: 200px;
+	color: white;
+	text-align: center;
+    color: #fff !important;
+    font-size: 1em;
+    margin: 0;
+    text-decoration: none;
+    padding: 20PX;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-right: solid 1px rgba(255, 255, 255, 0.54);
+    border-top: solid 1px rgba(255, 255, 255, 0.54);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.54);
+    border-left: solid 1px rgba(255, 255, 255, 0.54);
+}
+nav ul li a:hover {
+	color:#000 !important;
+    background:#fff !important;
+    text-decoration: none;
+}
+nav > ul > li {
+	float: left;
+}
+
+nav ul::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.navbar-center{
+	position: absolute;
+    left: 40%;
+    transform: translatex(-32%);
+}
+
+header img{
+	display:block;
+	width: 180px;
+	margin: auto;
+}
+
+/*------DESCUBRE-------*/
+#imagen-lenguajes{
+	width: 550px;
+	margin: 100px 80px;
+}
+
+#descubre1{
+	float: left;
+	display: inline-block;
+
+}
+/**
+#descubre2{
+	margin-right: 200px;
+    margin-top: 160px;
+    
+	
+	width: 35%;
+}**/
+
+
+
+#descubre1, #descubre2 ::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+h2.encabezados{
+	color: #404040;
+    font-size: 35px;
+    font-weight: 300;
+    margin: 5px 0;
+    text-align: center;
+    line-height: 1.4;
+	
+}
+
+p.parrafos-encabezados{
+	margin-top: 20px;
+	color: #555555bd;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.9;
+    text-align: justify;
+}
+

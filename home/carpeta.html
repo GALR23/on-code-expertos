@@ -1,0 +1,260 @@
+     
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>On-code: Inicio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style1.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome1.css" rel="stylesheet"> 
+<!-- jQuery -->
+<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery-1.10.2.min.js"></script>
+
+<style>
+	.form-control{
+		height: 48px!important;
+		width: 68%;
+	}
+	#nombre-carpeta, #nombre-archivo{
+		margin-top: 2%;
+		width: 68%;
+		display: inline-block;
+		margin-left: 2%;
+		margin-bottom: 5%;
+	}
+	.modal-title {
+    margin: 0;
+    line-height: 0;
+    margin-top: 3%;
+    text-align: center;
+}
+
+
+
+.btn {
+    margin-left: 38%;
+    margin-top: 5%;
+   
+}
+
+</style>
+
+<!--//skycons-icons-->
+</head> 
+<body>
+		<div class="modal fade" id="ayudaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title info-importar" id="exampleModalLabel">Crear una nueva carpeta</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                        <!--MODIFICAR ESTE CONTENIDO -->
+						<form action="/" method="post">
+							<label>Nombre de la carpeta:</label> 
+							<input id="nombre-carpeta" type="text" name="name"  required/><br>
+							<button id="crear-carpeta" type="button" class="btn btn-success">Crear carpeta</button>
+						</form>
+                        </div>
+                        <div class="modal-footer">
+                            <!--button data-dismiss="modal" type="button" class="btn btn-primary entendido">Entendido</button-->
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="modal fade" id="modalArchivo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title info-importar" id="exampleModalLabel">Crear un nuevo archivo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                        <!--MODIFICAR ESTE CONTENIDO -->
+						<form action="/" method="post">
+							<label>Nombre del archivo:</label> 
+							<input id="nombre-archivo" type="text" name="name"  required/><br>
+							<label>Extension del archivo:</label> 
+							<select id="select-extension" class="form-control">
+									<option value="html">HTML</option>
+									<option value="css">CSS</option>
+									<option value="javascript">JavaScript</option>
+									<option value="java">Java</option>
+									<option value="python">Python</option>
+									<option value="sql">SQL</option>
+									<option value="c">C</option>
+									<option value="cchar">C#</option>
+									<option value="cplus">C++</option>
+									<option value="json">JSON</option>
+									<option value="perl">PERL</option>
+									<option value="php">PHP</option>
+									<option value="ruby">RUBY</option>
+									<option value="txt">Txt</option>
+							</select>
+							<button id="crear-archivo" type="button" class="btn btn-success">Crear Archivo</button>
+						</form>
+                        </div>
+                        <div class="modal-footer">
+                            <!--button data-dismiss="modal" type="button" class="btn btn-primary entendido">Entendido</button-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+   <div class="page-container">
+   <!--/content-inner-->
+	<div class="left-content">
+	   <div class="inner-content">
+		<!-- header-starts -->
+			<div class="header-section">
+						<!--menu-right-->
+						<div class="top_menu">
+						       
+									<div class="srch"><button></button></div>
+									<script type="text/javascript">
+										 $('.main-search').hide();
+										$('button').click(function (){
+											$('.main-search').show();
+											$('.main-search text').focus();
+										}
+										);
+										$('.close').click(function(){
+											$('.main-search').hide();
+										});
+									</script>
+							<!--/profile_details-->
+								<div class="profile_details_left">
+									<ul class="nofitications-dropdown">
+									       
+
+							<li class="" style="list-style: none;">
+								<a title="Nuevo archivo" data-toggle="modal" data-target="#modalArchivo" class="dropdown-toggle">
+									
+								</a>
+							  </li>	
+							  <li class="dropdown note">
+									<a title="Nueva carpeta" data-toggle="modal" data-target="#ayudaModal" class="dropdown-toggle">
+											<i class="fa fa-folder-open"></i>
+									</a>
+								  </li>	 
+								  
+								  <li class="dropdown note">
+										<a title="Nueva carpeta" data-toggle="modal" data-target="#modalArchivo" class="dropdown-toggle">
+												<i class="fa fa-plus"></i>
+										</a>
+									  </li>	   	
+							<div class="clearfix"></div>	
+								</ul>
+							</div>
+							<div class="clearfix"></div>	
+							<!--//profile_details-->
+						</div>
+						<!--//menu-right-->
+					<div class="clearfix"></div>
+				</div>
+					<!-- //header-ends -->
+					<div class="sidebar-menu">
+						<header class="logo">
+						<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo"> <img src="img/logo2.png" width="100px" style="
+							margin-left: 35px;
+							margin-top: -2px;" alt=""> <!-- <h1>Augment</h1>--></span> 
+						<!--<img id="logo" src="" alt="Logo"/>--> 
+						</a> 
+					</header>
+				<div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+				<!--/down-->
+								<div class="down">	
+										<input type="hidden"  id="usuario-hidden">
+											<a href="inicio.html"><img src="images/admin.jpg"></a>
+											<a id="nombre-usuario" class="name-caret" style="display:  block; margin-top: 5%;">Nombre</a>
+										 <p>Desarrollador Web</p>
+										<ul>
+										<li><a class="tooltips" href="#"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+											<li><a class="tooltips" href="#"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
+											<li><a class="tooltips" href="/logout"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
+											</ul>
+										</div>
+									 <!--//down-->
+														 <div class="menu">
+										<ul id="menu" >
+											<li><a href="#"><i class="fa fa-file"></i> <span>Mis archivos</span></a></li>
+											 <li id="menu-academico" ><a href="#"><i class="fa fa-users"></i> <span> Compartidas conmigo</span> </a></li>
+											 <li id="menu-academico" ><a href="#"><i class="fa fa-clock-o"></i> <span>Recientes</span></a></li>
+											 <li><a href="#"><i class="fa fa-trash-o"></i> <span>Papelera</span></a></li>
+									
+										 <li><a href="#"><i class="fa fa-dollar"></i> <span>Planes</span></a></li>
+										</ul>
+									</div>
+									</div>
+						<div  class="outter-wp">
+								<!--custom-widgets-->
+								<h3 style="margin-left: 1%;">Mis Archivos</h3> <br>
+								<div id="div-documentos" class="row">
+										
+
+								</div>
+												
+										<!--//outer-wp-->
+									</div>
+								</div>
+							</div>
+				<!--//content-inner-->
+			<!--/sidebar-menu-->
+			
+							  <div class="clearfix"></div>		
+							</div> <!--page container end-->
+							<script>
+							var toggle = true;
+										
+							$(".sidebar-icon").click(function() {                
+							  if (toggle)
+							  {
+								$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+								$("#menu span").css({"position":"absolute"});
+							  }
+							  else
+							  {
+								$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+								setTimeout(function() {
+								  $("#menu span").css({"position":"relative"});
+								}, 400);
+							  }
+											
+											toggle = !toggle;
+										});
+							</script>
+<!--js -->
+
+<script type="text/javascript" src="js/TweenLite.min.js"></script>
+<script type="text/javascript" src="js/CSSPlugin.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+           
+   <script src="controladores/controlador-carpeta.js"></script>
+</body>
+</html>
