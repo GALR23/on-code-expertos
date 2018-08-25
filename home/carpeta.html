@@ -52,7 +52,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     margin-top: 5%;
    
 }
-
+.header-section {
+    background: #052963;
+    box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
+    -webkit-box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
+    -moz-box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
+    -o-box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
+}
 </style>
 
 <!--//skycons-icons-->
@@ -189,17 +195,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<input type="hidden"  id="usuario-hidden">
 											<a href="inicio.html"><img src="images/admin.jpg"></a>
 											<a id="nombre-usuario" class="name-caret" style="display:  block; margin-top: 5%;">Nombre</a>
-										 <p>Desarrollador Web</p>
+											<p id="side-puesto">Desarrollador</p>
 										<ul>
-										<li><a class="tooltips" href="#"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
-											<li><a class="tooltips" href="#"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
+										<li><a class="tooltips" href="inicio.html"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+											<li><a class="tooltips" href="configuracion.html"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
 											<li><a class="tooltips" href="/logout"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
 											</ul>
 										</div>
 									 <!--//down-->
 														 <div class="menu">
 										<ul id="menu" >
-											<li><a href="#"><i class="fa fa-file"></i> <span>Mis archivos</span></a></li>
+											<li><a href="inicio.html"><i class="fa fa-file"></i> <span>Mis archivos</span></a></li>
 											 <li id="menu-academico" ><a href="#"><i class="fa fa-users"></i> <span> Compartidas conmigo</span> </a></li>
 											 <li id="menu-academico" ><a href="#"><i class="fa fa-clock-o"></i> <span>Recientes</span></a></li>
 											 <li><a href="#"><i class="fa fa-trash-o"></i> <span>Papelera</span></a></li>
@@ -210,7 +216,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									</div>
 						<div  class="outter-wp">
 								<!--custom-widgets-->
-								<h3 style="margin-left: 1%;">Mis Archivos</h3> <br>
+								<h3 id="Nombre-carpeta" style="margin-left: 43%;"></h3> <br>
 								<div id="div-documentos" class="row">
 										
 

@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
     border: 1px solid #E7E7E8;
-    height: 320px;
+    height: 479px;
 }
 
 h3.sub-tittle {
@@ -51,6 +51,13 @@ h3.sub-tittle {
 }
 h2.inner-tittle, h3.inner-tittle {
     text-align: center;
+}
+.header-section {
+    background: #052963;
+    box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
+    -webkit-box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
+    -moz-box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
+    -o-box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
 }
 </style>
 <!-- //js-->
@@ -102,27 +109,27 @@ h2.inner-tittle, h3.inner-tittle {
 																		<div class="about-info-p">
 																			<strong>Nombre </strong>
 																			<br>
-																			<input id="txt-nombre" type="text" name="name"  required/><br>
+																			<input class="form-control" id="txt-nombre" type="text" name="name"  required/><br>
 																		</div>
 																		<div class="about-info-p">
 																				<strong>Apellido</strong>
 																				<br>
-																				<input id="txt-apellido" type="text" name="name"  required/><br>
+																				<input class="form-control" id="txt-apellido" type="text" name="name"  required/><br>
 																			</div>
 																		<div class="about-info-p">
 																			<strong>Nombre de usuario</strong>
 																			<br>
-																			<input id="txt-usuario" type="text" name="name"  required/><br>
+																			<input class="form-control" id="txt-usuario" type="text" name="name"  required/><br>
 																		</div>
 																		<div class="about-info-p">
 																			<strong>Email</strong>
 																			<br>
-																			<input id="txt-correo" type="text" name="name"  required/><br>
+																			<input class="form-control" id="txt-correo" type="text" name="name"  required/><br>
 																		</div>
 																		<div class="about-info-p m-b-0">
 																			<strong>Puesto/Ocupacion</strong>
 																			<br>
-																			<input id="txt-puesto" type="text" name="name"  required/><br>
+																			<input class="form-control" id="txt-puesto" type="text" name="name"  required/><br>
 																		</div>
 																	</div>
 																 </div>
@@ -135,7 +142,7 @@ h2.inner-tittle, h3.inner-tittle {
 																<div id="div-descripcion">
 																		<h3 class="inner-tittle">Descripción personal </h3>
 																		<div class="main-grid3 p-skill">
-																				<textarea id="p-descripcion" rows="11" cols="70">
+																				<textarea class="form-control" id="p-descripcion" rows="19" cols="70">
 																						 
 																				</textarea>
 																		</div>
@@ -144,7 +151,7 @@ h2.inner-tittle, h3.inner-tittle {
 													
 																<div class="clearfix"></div>
 															</div>
-															<button id="btn-actualizar" type="button" class="btn btn-success">Actualizar datos</button>
+															<button style="margin-left: 40%;" id="btn-actualizar" type="button" class="btn btn-success">Actualizar datos</button>
 														</form>
 															
 											 	<!--//profile-inner-->
@@ -176,7 +183,7 @@ h2.inner-tittle, h3.inner-tittle {
 									<input type="hidden"  id="usuario-hidden">	
 									  <a href="#"><img src="images/admin.jpg"></a>
 									  <a id="nombre-usuario" class="name-caret" style="display:  block; margin-top: 5%;">Nombre</a>
-									 <p>Desarrollador</p>
+									 <p id="side-puesto">Desarrollador</p>
 									 <ul>
 											<li><a class="tooltips" href="perfil.html"><span>Perfil</span><i class="lnr lnr-user"></i></a></li>
 												<li><a class="tooltips" href="configuracion.html"><span>Configuración</span><i class="lnr lnr-cog"></i></a></li>

@@ -27,6 +27,7 @@ function datosUsuario (){
         success:function(respuesta){
 			console.log(respuesta);
             $("#nombre-usuario").html(respuesta.nombre_usuario+" "+respuesta.apellido_usuario);
+            $("#side-puesto").text(respuesta.puesto);
             $("#p-nombre").text(respuesta.nombre_usuario+" "+respuesta.apellido_usuario);
             $("#h2-nombre").text(respuesta.nombre_usuario+" "+respuesta.apellido_usuario);
             $("#p-usuario").text(respuesta.username);

@@ -48,6 +48,7 @@ function datosUsuario (){
         success:function(respuesta){
 			console.log(respuesta);
             $("#nombre-usuario").html(respuesta.nombre_usuario+" "+respuesta.apellido_usuario);
+            $("#side-puesto").text(respuesta.puesto);
 		}
     });
 }

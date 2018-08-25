@@ -29,6 +29,7 @@ function datosUsuario (){
             $("#nombre-usuario").html(respuesta.nombre_usuario+" "+respuesta.apellido_usuario);
             $("#h2-nombre").text(respuesta.nombre_usuario+" "+respuesta.apellido_usuario);
             $("#p2-puesto").text(respuesta.puesto);
+            $("#side-puesto").text(respuesta.puesto);
 
 
             $("#txt-nombre").val(respuesta.nombre_usuario);

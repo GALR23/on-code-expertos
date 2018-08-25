@@ -7,6 +7,11 @@ $("#registrar").click(function(){
                         "correo="+$("#correo").val() + "&"+
                         "username="+$("#username").val() + "&"+
                         "contrasena="+$("#contrasena").val();
+
+     if($("#correo").val().indexOf('@', 0) == -1 || $("#correo").val().indexOf('.', 0) == -1) {
+            alert('El correo electrónico introducido no es correcto.');
+        }else{
+                        
         $.ajax({
             url:"/registrar-usuario",
             method:"POST",
@@ -16,14 +21,15 @@ $("#registrar").click(function(){
                 if(response.estatus == 1){
                     //$('#cuenta-existente').modal();
                     alert("Ya existe un usuario con esa cuenta, porfavor verifica tus datos");
-                }else{
+                }
+                else{
                     //$('#registro-exitoso').modal();
                     alert("Registro Existoso, ¡Bienvenido a On-code!");
                     window.location ="../login.html";
                 }
                 console.log(response);
             }
-        });
+        });}
     }else{
         console.log("campos vacios");
         alert("Existen campos vacios, porfavor llena todos los campos");
@@ -46,3 +52,4 @@ function crearCarpetaNuevoUsuario(codigoNuevoUsuario){
 	});
 
 }
+

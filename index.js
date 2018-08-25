@@ -102,6 +102,32 @@ app.post("/obtener-archivos", function(request, response){
     });   
 });
 
+app.post("/obtener-archivos-carpeta", function(request, response){
+    var conexion = mysql.createConnection(credenciales);
+    var sql = `SELECT a.codigo_archivo, b.nombre_archivo, b.contenido_archivo, b.extension_archivo FROM tbl_archivos_x_carpetas a INNER JOIN tbl_archivos b ON a.codigo_archivo = b.codigo_archivo WHERE codigo_carpeta = ?`;
+    var archivos = [];
+    conexion.query(sql, [request.cookies.carpeta])
+    .on("result", function(resultado){
+        archivos.push(resultado);
+    })
+    .on("end",function(){
+        response.send(archivos);
+    });   
+});
+
+app.post("/obtener-carpetas-carpetas", function(request, response){
+    var conexion = mysql.createConnection(credenciales);
+    var sql = `SELECT * FROM tbl_carpetas  WHERE codigo_carpeta_padre = ?`;
+    var carpetas = [];
+    conexion.query(sql, [request.cookies.carpeta])
+    .on("result", function(resultado){
+        carpetas.push(resultado);
+    })
+    .on("end",function(){
+        response.send(carpetas);
+    });   
+});
+
 app.post("/obtener-info-usuario", function(request, response){
     var conexion = mysql.createConnection(credenciales);
     var sql = `SELECT * FROM tbl_usuarios  WHERE codigo_usuario = ?`;
@@ -115,7 +141,18 @@ app.post("/obtener-info-usuario", function(request, response){
     });   
 });
 
-
+app.post("/obtener-nombre-carpeta", function(request, response){
+    var conexion = mysql.createConnection(credenciales);
+    var sql = `SELECT * FROM tbl_carpetas  WHERE codigo_carpeta = ?`;
+    var carpetas = [];
+    conexion.query(sql, [request.cookies.carpeta])
+    .on("result", function(resultado){
+        carpetas.push(resultado);
+    })
+    .on("end",function(){
+        response.send(carpetas[0]);
+    });   
+});
 
 app.post("/obtener-carpetas", function(request, response){
     var conexion = mysql.createConnection(credenciales);
@@ -152,9 +189,31 @@ app.post("/crear-carpeta", function(request, response){
      });    
 });
 
+app.post("/crear-carpeta-carpeta", function(request, response){
+    var conexion = mysql.createConnection(credenciales);
+    var sql_insertar = 'INSERT INTO tbl_carpetas (codigo_usuario, nombre_carpeta, codigo_carpeta_padre) VALUES (?,?,?)';
+    var sql_consultar = 'SELECT * FROM tbl_carpetas where codigo_usuario = ? and nombre_carpeta = ? and codigo_carpeta_padre = ?';
+    
+    conexion.query(sql_consultar,[request.session.codigoUsuario, request.body.nombreCarpeta, request.cookies.carpeta ],function (err, data, fields) { 
+        if(data.length>0){
+            response.send({estatus:1, mensaje:"Ya hay una carpeta con ese nombre."});
+        }else{
+            conexion.query(
+                sql_insertar,
+                [request.session.codigoUsuario, request.body.nombreCarpeta, request.cookies.carpeta],
+                function(err, result){
+                    if (err) throw err;
+                    response.send(result);
+                    
+                }
+            );
+        }
+     });    
+});
+
 app.post("/crear-archivo", function(request, response){
     var conexion = mysql.createConnection(credenciales);
-    var sql_insertar = 'INSERT INTO tbl_archivos (codigo_usuario, nombre_archivo, extension_archivo, codigo_estado) VALUES (?,?,?,1)';
+    var sql_insertar = 'INSERT INTO tbl_archivos (codigo_usuario, nombre_archivo, extension_archivo) VALUES (?,?,?)';
     var sql_consultar = 'SELECT * FROM tbl_archivos where codigo_usuario = ? and nombre_archivo = ?';
     
     conexion.query(sql_consultar,[request.session.codigoUsuario, request.body.nombreArchivo ],function (err, data, fields) { 
